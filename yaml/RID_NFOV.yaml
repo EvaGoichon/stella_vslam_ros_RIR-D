@@ -1,0 +1,92 @@
+#=================#
+# Camera Settings #
+#=================#
+
+# Caméra principale RGB
+Camera:
+  name: "MIS Azure"
+  setup: "RGBIRD"
+  model: "perspective"
+  fx: 975.6052304
+  fy: 975.4081462
+  cx: 1031.9588998
+  cy: 776.1582652
+  k1: 0.1170477515
+  k2: -0.1128922358
+  k3: 0.04999746822
+  p1: 0.0003342679069
+  p2: 0.001791096261
+  fps: 15.0
+  cols: 2048
+  rows: 1536
+  color_order: "RGB"
+
+# IR/Depth 
+CameraIR:
+  name: "AKDK NFOV unbinned"
+  setup: "monocular"
+  model: "perspective"
+  fx: 503.87698
+  fy: 504.145446
+  cx: 317.078094
+  cy: 330.83316
+  k1: -0.305857
+  k2: 0.0932144
+  k3: -0.012551
+  p1: 0.000118942
+  p2: 2.88387e-05
+  cols: 640
+  rows: 576
+  fps: 15.0
+  color_order: "Gray"
+  
+# Transformation (Depth to RGB)
+Transformation:
+  # Translation (m) 
+  translation: [0.03205899987950451, 0.0026638573848038003, -0.0037277228910722222]
+  # Rotation quaternion (w, x, y, z)
+  rotation_quaternion: [0.9988360261809736, 0.048184002490250503, 0.0016676702807752357, 0.0014538198544373287]
+
+#=====================#
+# Tracking Parameters #
+#=====================#
+
+Preprocessing:
+  min_size: 500
+  depthmap_factor: 1000.0
+
+#===================#
+# Feature Detection #
+#===================#
+Feature:
+  name: "ORB"
+  scale_factor: 1.2
+  num_levels: 4              
+  ini_fast_threshold: 30 # 0D : 30 -  50D : 30 - 100D : 30
+  min_fast_threshold: 25 # 0D : 25 -  50D : 25 - 100D : 25
+
+#====================#
+# Mapping Parameters #
+#====================#
+
+Mapping:
+  baseline_dist_thr_ratio: 0.015
+  redundant_obs_ratio_thr: 0.85
+  num_covisibilities_for_landmark_generation: 15
+  num_covisibilities_for_landmark_fusion: 15
+  
+#===========================#
+# PangolinViewer Parameters #
+#===========================#
+
+PangolinViewer:
+  keyframe_size: 0.06
+  keyframe_line_width: 1
+  graph_line_width: 1
+  point_size: 2
+  camera_size: 0.07
+  camera_line_width: 2
+  viewpoint_x: 0
+  viewpoint_y: -10
+  viewpoint_z: -0.1
+  viewpoint_f: 500
