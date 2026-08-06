@@ -4,7 +4,7 @@ ROS2 wrapper implementing **RGB-IR-Depth SLAM (RIR-D SLAM)**, a multimodal exten
 [StellaVSLAM](https://github.com/stella-cv/stella_vslam_ros) unifying RGB, near-infrared (NIR),
 and depth sensing within a single tracking/mapping pipeline. This repository accompanies the
 paper *"RIR-D SLAM: Joint high resolution RGB-D and wide-angle NIR-D visual SLAM"*
-(under review) and contains everything needed to reproduce its experiments.
+(submitted) and contains everything needed to reproduce its experiments.
 
 > **Naming note:** the project is referred to as *RIR-D SLAM* to avoid confusion with an
 > unrelated prior work also named "RID SLAM". Internal file and launch names (e.g.
@@ -22,11 +22,11 @@ official installation procedure:
 https://stella-cv.readthedocs.io/en/latest/ros2_package.html#installation
 
 ```bash
-git clone --recursive --depth 1 -b RGBIRD <URL_FORK_STELLA_VSLAM> stella_vslam
+git clone --recursive --depth 1 -b RGBIRD https://github.com/EvaGoichon/openvslam-omni.git stella_vslam
 cd stella_vslam
 # follow the official build/install instructions from the link above, unchanged
 ```
-> ⚠️ This fork is currently **private**. Contact <TON EMAIL> to request access.
+> ⚠️ This fork is currently **private**. Contact eva.goichon@outlook.fr to request access.
 
 Verify the engine installs and builds successfully before continuing.
 
@@ -75,7 +75,7 @@ https://extra.u-picardie.fr/nextcloud/index.php/s/yLG72QH46tsSiea
 
 The two real-world sequences used in Section "Robustness under Real Lighting
 Variations" (no ground truth, WFoV only) will be made available shortly — link to be
-added here. In the meantime, contact <TON EMAIL>.
+added here. In the meantime, contact eva.goichon@outlook.fr .
 
 ---
 
@@ -158,12 +158,12 @@ combined terms.
 
 If you use this code, please cite:
 ```bibtex
-@inproceedings{TODO_bibtex_key,
-  author    = {Eva Goichon and ...},
+@inproceedings{goichon2026rird,
+  author    = {Eva Goichon and Guillaume Caron and Pascal Vasseur and Fumio Kanehiro},
   title     = {RIR-D SLAM: Joint high resolution RGB-D and wide-angle NIR-D visual SLAM},
-  booktitle = {TODO venue},
+  booktitle = {SII2027},
   year      = {2026},
-  note      = {Under review}
+  note      = {submitted}
 }
 ```
 
