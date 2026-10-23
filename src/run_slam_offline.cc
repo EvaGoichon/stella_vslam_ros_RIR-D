@@ -253,9 +253,9 @@ void tracking(const std::shared_ptr<stella_vslam_ros::system>& slam_ros,
             
             const auto tp_1 = std::chrono::steady_clock::now();
             
-            // Vérifier que toutes les queues ont des données
+            // Check that all queues have data
             if (!que.empty() && !que_depth_rgb.empty() && !que_ir.empty() && !que_depth_ir.empty()) {
-                // APPEL AVEC 4 IMAGES
+                // Call with 4 images
                 rgbird->process_images(que.front(),           // RGB
                                     que_depth_rgb.front(),  // Depth RGB-aligned
                                     que_ir.front(),         // IR

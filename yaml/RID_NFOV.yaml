@@ -2,7 +2,7 @@
 # Camera Settings #
 #=================#
 
-# Caméra principale RGB
+# Main RGB camera
 Camera:
   name: "MIS Azure"
   setup: "RGBIRD"

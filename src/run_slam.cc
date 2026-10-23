@@ -215,7 +215,7 @@ int main(int argc, char* argv[]) {
         slam_ros = std::make_shared<stella_vslam_ros::rgbd>(slam, mask_img_path->value());
     }
     else if (slam->get_camera()->setup_type_ == stella_vslam::camera::setup_type_t::RGBIRD) {
-        slam_ros = std::make_shared<stella_vslam_ros::rgbird>(slam, mask_img_path->value(), mask_img_path->value()); //EVA TODO: rempalcer le path
+        slam_ros = std::make_shared<stella_vslam_ros::rgbird>(slam, mask_img_path->value(), mask_img_path->value()); //TODO: replace the path (dedicated IR mask)
     }
     else {
         throw std::runtime_error("Invalid setup type: " + slam->get_camera()->get_setup_type_string());
